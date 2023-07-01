@@ -6,7 +6,11 @@
         <!-- Logo -->
         <div class="flex-shrink-0 flex items-center">
           <img class="h-16 w-100" src="./assets/logo.jpg" alt="Logo">
+      <h5 class="sm:text-1xl text-1xl font-medium title-font mb-1 text-gray-900"> Heroic properties  </h5>
+
         </div>
+
+
 
         <!-- Mobile Menu Button -->
         <div class="-mr-2 flex items-center sm:hidden">
@@ -22,18 +26,20 @@
         <!-- Desktop Menu -->
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-4">
-            <router-link to="/" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Home</router-link>
+            <router-link to="/" href="#section1" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Home</router-link>
 
             <a href="#section2" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Services</a>
-            <a href="#sectionp" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Properties</a>
-            <a href="#section1" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Testimonials</a>
-            <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">About</a>
+            <a href="#section3" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Properties</a>
+            <a href="#section4" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Testimonials</a>
 
           </div>
         </div>
     </div>
   </div>
 </nav>
+
+
+
 
 <RouterView />
 
@@ -42,6 +48,13 @@
 
 
 <script setup>
+
+
+// import Indexcom from './views/IndexView.vue';
+
+// import DetailsView  from './views/DetailsView.vue';
+
+
 
 </script>
 

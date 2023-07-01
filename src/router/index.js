@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Details from '../views/DetailsView.vue';
-import home from '../views/HomepageView.vue'
+import moredetails from '../views/DetailsView.vue';
+import Indexcom from '../views/IndexView.vue'
+
 
 
 const router = createRouter({
@@ -10,14 +11,16 @@ const router = createRouter({
         {
             path: '/',
             name:'home',
-            component:home
+            component:Indexcom
         },
 
         {
-            path:'/details/:propid',
-            name:'details',
-            component: Details
+            path: '/moredetails/:propid/:category',
+            name: 'moredetails',
+            component: moredetails
         }
+
+       
     ]
 }) ;
 
