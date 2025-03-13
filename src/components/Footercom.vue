@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="relative max-w-full py-1 mt-3 mb-1" style="background-color: darkslategrey;">
+    <div class="relative max-w-full py-1 mb-1" style="background-color: darkslategrey;">
       <!-- Footer Start -->
       <footer class="bg-gray items-center" aria-labelledby="footer-heading">
         <div class="flex items-center justify-center py-2 mx-auto bg-gray-50 max-w-7xl sm:px-6 md:flex md:justify-center lg:px-20" 

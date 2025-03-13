@@ -2,9 +2,13 @@
     
 <main>
 
-<section id="section1" class="text-gray-600 body-font">
+  <!-- <div :class="{ dark: darkModeStore.isDarkMode }" class="min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white"> -->
 
-  
+<section id="section1" class="p-4 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100">
+
+
+
+
 
   <section id="section1" class="text-gray-600 body-font">
   <div class="container lg:px-5  mx-auto">
@@ -23,49 +27,25 @@
 
     <div class="flex flex-wrap m-4 text-center mt-5 lg:ml-10 mb-9">
 
-     <!-- propery category dropdown -->
-    <!-- <div class="md:w-1/4 lg:w-1/4 sm:w-1/2 w-full mt-2 lg:ml-2">
-      <button @click="toggleDropdownprop" type="button" class="inline-flex justify-center ml-1 items-center lg:px-4 
-      py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-100 focus:outline-none 
-      focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full" id="dropdown-menu" aria-expanded="true" aria-haspopup="true">
-      {{ selectedProperty || 'Property category' }}
-      <svg v-if="propDropdownOpen" class="w-5 h-5 ml-2 -mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-      </svg>
-      <svg v-else class="w-5 h-5 ml-2 -mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-      </svg>
-    </button>
-
-    <div v-if="propDropdownOpen" class="origin-top absolute left-20      mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="dropdown-menu">
-      <a @click="propOption(option)" v-for="option in PropdownOptions" :key="option.id" href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">
-        {{ option.label }}
-      </a>
-    </div>
-    </div> -->
-
-
-
-
     <div class="md:w-1/4 lg:w-1/4 sm:w-1/2 w-full mt-2 lg:ml-2 relative">
-  <button @click="toggleDropdownprop" type="button" class="inline-flex justify-between items-center lg:px-4 
-  py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-100 focus:outline-none 
-  focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full">
-    {{ selectedProperty || 'Property category' }}
-    <svg v-if="propDropdownOpen" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-    </svg>
-    <svg v-else class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-    </svg>
-  </button>
+      <button @click="toggleDropdownprop" type="button" class="inline-flex justify-between items-center lg:px-4 
+      py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-100 focus:outline-none 
+      focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full">
+        {{ selectedProperty || 'Property category' }}
+        <svg v-if="propDropdownOpen" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+        <svg v-else class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </button>
 
-  <div v-if="propDropdownOpen" class="absolute left-0 lg:left-0 mt-2 w-full lg:w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-    <a @click="propOption(option)" v-for="option in PropdownOptions" :key="option.id" href="#" class="block lg:px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">
-      {{ option.label }}
-    </a>
-  </div>
-</div>
+      <div v-if="propDropdownOpen" class="absolute left-0 lg:left-0 mt-2 w-full lg:w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <a @click="propOption(option)" v-for="option in PropdownOptions" :key="option.id" href="#" class="block lg:px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900">
+          {{ option.label }}
+        </a>
+      </div>
+    </div>
 
 
 
@@ -155,8 +135,8 @@
 </section>
 
 
-
 </section>
+<!-- </div> -->
 
 
 
@@ -166,17 +146,21 @@
 
 
 <script>
-
+import { useDarkModeStore } from "../store/darkModeStore"
 import apartment from '../assets/icons/apartments.svg';
 import hostel from '../assets/icons/hostel.svg';
 import house from '../assets/icons/house.svg';
 import office from '../assets/icons/office.svg';
 
 
-export default {
+export default { 
+  
 
   data() {
-    return {
+    const darkModeStore = useDarkModeStore();
+    return { darkModeStore ,
+  
+ 
 
       apartment: apartment,
       hostel: hostel,

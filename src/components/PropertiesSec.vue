@@ -1,5 +1,6 @@
 <script >
     import axios from '../axios'; 
+    import { useDarkModeStore } from "../store/darkModeStore"
 
     import apartment from '../assets/icons/apartments.svg';
     import hostel from '../assets/icons/hostel.svg';
@@ -9,7 +10,12 @@
 
      export default{
       data(){
-            return {               
+        
+        const darkModeStore = useDarkModeStore();
+
+        
+            return {    
+              darkModeStore,           
               apartment: apartment,
               hostel: hostel,
               house: house,
@@ -142,76 +148,78 @@
 
 
 <!-- header category section start -->
-<section id="section1" class="text-black-800 body-font bg-transparent">
+<section id="section1" class="p-4 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100">
 
-  <div class="container px-3 py-5 mx-auto h-full w-full bg-cover">
+  <div class="container px-3 py-5 mx-auto h-full w-full bg-cover dark:bg-gray-800 ">
 
 
-    <div class="relative items-center w-full px-1 py-2 mx-5 md:px-12 lg:px-24 max-w-7xl  mb-5 ml-3"  style="margin-bottom: 40px; margin-top: 20px;">
-      <div class="grid grid-cols-1 gap-3 lg:grid-cols-9 ">
+    <div class="relative items-center w-full px-1 py-2 mx-5 md:px-12 lg:px-24 max-w-7xl mb-5 ml-3 dark:bg-gray-800 dark:gray_900"   style="margin-bottom: 40px; margin-top: 20px;">
+      <!-- <div class="grid grid-cols-1 gap-3 lg:grid-cols-9 dark:border gray-500 dark: border rounded-md p-2"> -->
+    <div class="grid grid-cols-2 sm:grid-cols-3  md:grid-cols-3 lg:grid-cols-9 gap-3 dark:border-gray-800 dark: border rounded-md p-4">
 
-          <div class=" border-2 border-gray-50 rounded-lg flex flex-col w-full  text-left lg:mx-auto hover:bg-blue-100 "  @click="categoryProperties('Apartment')">
+
+          <div class=" border-2 border-gray-50 rounded-lg flex flex-col w-full  text-left lg:mx-auto hover:bg-blue-100 dark:border-gray-900"  @click="categoryProperties('Apartment')">
            <div class="container mx-auto flex justify-center items-center">
               <img alt="testimonial" class="object-center w-20 h-20 mt-1 " style="height: 30px;" :src="hostel">
           </div>
-          <small class="font-bold text-gray-700 justify-center mt-2 text-center"> one bedroom </small>
+          <small class="font-bold text-gray-700 justify-center mt-2 text-center dark:text-gray-300"> one bedroom </small>
         </div>
 
-        <div class=" border-2 border-gray-50 rounded-lg flex flex-col w-full  text-left lg:mx-auto hover:bg-blue-100 "  @click="categoryProperties('Apartment')">
+        <div class=" border-2 border-gray-50 rounded-lg flex flex-col w-full  text-left lg:mx-auto hover:bg-blue-100 dark:border-gray-900"  @click="categoryProperties('Apartment')">
           <div class="container mx-auto flex justify-center items-center">
           <img alt="testimonial" class="object-center w-20 h-20 mt-1" style="height: 30px;" :src="apartment">
           </div>
-          <small class="font-bold text-gray-700 justify-center mt-2 text-center"> Two bedroom </small>
+          <small class="font-bold text-gray-700 justify-center mt-2 text-center dark:text-gray-300"> Two bedroom </small>
         </div>
 
-        <div class=" border-2 border-gray-50 rounded-lg flex flex-col w-full  text-left lg:mx-auto hover:bg-blue-100"  @click="categoryProperties('Apartment')">
+        <div class=" border-2 border-gray-50 rounded-lg flex flex-col w-full  text-left lg:mx-auto hover:bg-blue-100 dark:border-gray-900"  @click="categoryProperties('Apartment')">
           <div class="container mx-auto flex justify-center items-center">
           <img alt="testimonial" class="object-center w-20 h-20 mt-1 " style="height: 30px;"  :src="house">
           </div>
-          <small class="font-bold text-gray-700 justify-center mt-2 text-center"> Single room</small>
+          <small class="font-bold text-gray-700 justify-center mt-2 text-center dark:text-gray-300"> Single room</small>
         </div>
 
-        <div class=" border-2 border-gray-50 rounded-lg flex flex-col w-full  text-left lg:mx-auto hover:bg-blue-100"  @click="categoryProperties('Apartment')">
+        <div class=" border-2 border-gray-50 rounded-lg flex flex-col w-full  text-left lg:mx-auto hover:bg-blue-100 dark:border-gray-900"  @click="categoryProperties('Apartment')">
           <div class="container mx-auto flex justify-center items-center">
           <img alt="testimonial" class="object-center w-20 h-20 mt-1 " style="height: 30px;" :src="office">
           </div>
-          <small class="font-bold text-gray-700 justify-center mt-2 text-center"> Bedsitter</small>
+          <small class="font-bold text-gray-700 justify-center mt-2 text-center dark:text-gray-300"> Bedsitter</small>
         </div>
 
-        <div class=" border-2 border-gray-50 rounded-lg flex flex-col w-full  text-left lg:mx-auto hover:bg-blue-100"  @click="categoryProperties('Apartment')">
+        <div class=" border-2 border-gray-50 rounded-lg flex flex-col w-full  text-left lg:mx-auto hover:bg-blue-100 dark:border-gray-900"  @click="categoryProperties('Apartment')">
           <div class="container mx-auto flex justify-center items-center">
           <img alt="testimonial" class="object-center w-20 h-20 mt-1 " style="height: 30px;" :src="apartment">
           </div>
-          <small class="font-bold text-gray-700 justify-center mt-2 text-center"> mansion </small>
+          <small class="font-bold text-gray-700 justify-center mt-2 text-center dark:text-gray-300 "> mansion </small>
         </div>
 
-        <div class=" border-2 border-gray-50 rounded-lg flex flex-col w-full  text-left lg:mx-auto hover:bg-blue-100"  @click="categoryProperties('Apartment')">
+        <div class=" border-2 border-gray-50 rounded-lg flex flex-col w-full  text-left lg:mx-auto hover:bg-blue-100 dark:border-gray-900"  @click="categoryProperties('Apartment')">
           <div class="container mx-auto flex justify-center items-center">
           <img alt="testimonial" class="object-center w-20 h-20 mt-1 " style="height: 30px;" :src="apartment">
           </div>
-          <small class="font-bold text-gray-700 justify-center mt-2 text-center"> studio  </small>
+          <small class="font-bold text-gray-700 justify-center mt-2 text-center dark:text-gray-300"> studio  </small>
         </div>
 
-        <div class=" border-2 border-gray-50 rounded-lg flex flex-col w-full  text-left lg:mx-auto hover:bg-blue-100"  @click="categoryProperties('Apartment')">
+        <div class=" border-2 border-gray-50 rounded-lg flex flex-col w-full  text-left lg:mx-auto hover:bg-blue-100 dark:border-gray-900"  @click="categoryProperties('Apartment')">
           <div class="container mx-auto flex justify-center items-center">
           <img alt="testimonial" class="object-center w-20 h-20 mt-1  "  style="height: 30px;" :src="apartment">
           </div>
-          <small class="font-bold text-gray-700 justify-center mt-2 text-center">Hostel </small>
+          <small class="font-bold text-gray-700 justify-center mt-2 text-center dark:text-gray-300">Hostel </small>
         </div>
 
 
-        <div class=" border-2 border-gray-50 rounded-lg flex flex-col w-full  text-left lg:mx-auto hover:bg-blue-100"  @click="categoryProperties('Apartment')">
+        <div class=" border-2 border-gray-50 rounded-lg flex flex-col w-full  text-left lg:mx-auto hover:bg-blue-100 dark:border-gray-900"  @click="categoryProperties('Apartment')">
           <div class="container mx-auto flex justify-center items-center">
           <img alt="testimonial" class="object-center w-20 h-20 mt-1 "  style="height: 30px;" :src="apartment">
           </div>
-          <small class="font-bold text-gray-700 justify-center mt-2 text-center">House</small>
+          <small class="font-bold text-gray-700 justify-center mt-2 text-center dark:text-gray-300">House</small>
         </div>
 
-        <div class=" border-2 border-gray-50 rounded-lg flex flex-col w-full  text-left lg:mx-auto hover:bg-blue-100"  @click="categoryProperties('Apartment')">
+        <div class=" border-2 border-gray-50 rounded-lg flex flex-col w-full  text-left lg:mx-auto hover:bg-blue-100 dark:border-gray-900"  @click="categoryProperties('Apartment')">
           <div class="container mx-auto flex justify-center items-center">
           <img alt="testimonial" class="object-center w-20 h-20 mt-1 "  style="height: 30px;" :src="apartment">
           </div>
-          <small class="font-bold text-gray-700 justify-center mt-2 text-center"> Maisonette</small>
+          <small class="font-bold text-gray-700 justify-center mt-2 text-center dark:text-gray-300"> Maisonette</small>
         </div>
 
     </div>
@@ -220,14 +228,17 @@
 
 
 <!-- search property section start -->
- <div class="relative items-center w-full  py-1 mx-5 md:px-12 lg:px-15 max-w-7xl  mb-5 ml-3"  style="margin-top: 20px;">
+ <div class="relative items-center w-full  py-1 mx-5 md:px-12 lg:px-15 max-w-7xl  mb-5 ml-3 dark:bg-gray-800"  style="margin-top: 20px;">
 
     <form  @submit.prevent="searchProperty" > 
 
-    <div class="flex flex-wrap -m-4 text-center mt-5  mb-9" >
+    <div class="flex flex-wrap -m-4 text-center mt-5  mb-9 " >
      <!-- propery category dropdown -->
-        <div class="md:w-1/4 lg:w-1/4 sm:w-1/2 w-full mt-2 ml-2">
-             <button @click="toggleDropdownprop" type="button" class="inline-flex justify-center ml-1 items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full" id="dropdown-menu" aria-expanded="true" aria-haspopup="true">{{ selectedProperty || 'Property category' }}
+        <div class="md:w-1/4 lg:w-1/4 sm:w-1/2 w-full mt-2 lg:ml-2  mb-2 ">
+             <button @click="toggleDropdownprop" type="button" class=" dark:bg-gray-900 dark:text-gray-200 
+              dark:border-gray-600 inline-flex justify-center lg:ml-1 items-center px-4 py-3 
+              text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-100 
+              focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full" id="dropdown-menu" aria-expanded="true" aria-haspopup="true">{{ selectedProperty || 'Property category' }}
               <svg v-if="propDropdownOpen" class="w-5 h-5 ml-2 -mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg>
@@ -241,8 +252,9 @@
         </div>
 
       <!-- location category dropdown-->
-      <div class="md:w-1/4 lg:w-1/4 sm:w-1/2 w-full mt-2 ml-2">
-       <button @click="toggleDropdownloc" type="button" class="inline-flex justify-center ml-1 items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full" id="dropdown-menu" aria-expanded="true" aria-haspopup="true">{{ selectedlocation || 'location' }}
+      <div class="md:w-1/4 lg:w-1/4 sm:w-1/2 w-full mt-2 lg:ml-2 mb-2">
+       <button @click="toggleDropdownloc" type="button" class=" dark:bg-gray-900 dark:text-gray-200 
+        dark:border-gray-600 inline-flex justify-center lg:ml-1 items-center px-4 py-3 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 w-full" id="dropdown-menu" aria-expanded="true" aria-haspopup="true">{{ selectedlocation || 'location' }}
         <svg v-if="locDropdownOpen" class="w-5 h-5 ml-2 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
         </svg>
@@ -257,12 +269,15 @@
 
       <!-- max price input -->
       <div class="md:w-1/4 lg:w-1/5 sm:w-1/2 w-full mt-2 ml-2">
-        <input type="number" class="border rounded-lg px-3 py-2  mb-5 text-sm w-full ml-1" placeholder="max price" id="maxprice" v-model="maxprice" required />
+        <input type="number" class=" dark:bg-gray-900 dark:text-gray-200  dark:border-gray-600 border rounded-lg px-3 py-2  
+        mb-5 text-sm w-full lg:ml-1" placeholder="max price" id="maxprice" v-model="maxprice" required />
       </div>    
 
     <!-- search button -->
     <div class="md:w-1/4 lg:w-1/5 sm:w-1/2 w-full mt-2">
-        <button type="submit"  class="transition duration-200 bg-blue-500 hover:bg-blue-600 focus:bg-blue-700 focus:shadow-sm focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 text-white w-full  ml-5 py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-semibold text-center inline-block">
+        <button type="submit"  class=" dark:bg-gray-900 dark:text-gray-200  dark:border-gray-600 transition duration-200 
+        bg-blue-500 hover:bg-blue-600 focus:bg-blue-700 focus:shadow-sm focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 text-white w-full  
+        lg:ml-5 py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-semibold text-center inline-block">
             <span class="inline-block mr-2">Search </span>
         </button>
     </div>
@@ -282,10 +297,10 @@
 
 
 <!-- property section start -->
-<section id="section3">
-    <h1 class="text-2xl font-medium text-gray-700 pb-2 mx-5  font-roboto py-4 text-center" style="font-family: 'Nunito', sans-serif;" @click="fetchcategory('')"> 
+<section id="section3" class="p-4 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100">
+    <h1 class="text-2xl font-medium text-gray-400 pb-2 mx-5  font-roboto py-4 text-center" style="font-family: 'Nunito', sans-serif;" @click="fetchcategory('')"> 
       {{ Categ || ' Featured Properties' }} </h1>
-    <div class="relative items-center w-full px-3 py-2 mx-2 md:px-10 lg:px-10 max-w-7xl mb-12 border" >
+    <div class="relative items-center w-full px-3 py-2 mx-2 md:px-10 lg:px-10 max-w-7xl mb-12 border dark:border-gray-900 dark:border rounded p-4" >
         <div class="grid w-full grid-cols-1 gap-6 mx-auto lg:grid-cols-9">
           <div class="p-6" v-for="prop ,  index in properties" :key="index">
             <router-link :to="{ path: `/moredetails/${prop.id}/${prop.category}` }"> 

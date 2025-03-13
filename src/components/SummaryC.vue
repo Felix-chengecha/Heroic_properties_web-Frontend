@@ -42,7 +42,7 @@ export default{
 
 
 
-<section>
+<section class="p-4 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100">
 
 <!-- <div class="relative items-center w-full px-3 py-8 mx-auto md:px-3 lg:px-12 max-w-7xl bg-gray"> -->
 
