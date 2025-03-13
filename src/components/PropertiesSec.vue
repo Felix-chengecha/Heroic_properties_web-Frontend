@@ -166,35 +166,35 @@
 
         <div class=" border-2 border-gray-50 rounded-lg flex flex-col w-full  text-left lg:mx-auto hover:bg-blue-100"  @click="categoryProperties('Apartment')">
           <div class="container mx-auto flex justify-center items-center">
-          <img alt="testimonial" class="object-center w-20 h-20 mt-1  h-20" style="height: 30px;"  :src="house">
+          <img alt="testimonial" class="object-center w-20 h-20 mt-1 " style="height: 30px;"  :src="house">
           </div>
           <small class="font-bold text-gray-700 justify-center mt-2 text-center"> Single room</small>
         </div>
 
         <div class=" border-2 border-gray-50 rounded-lg flex flex-col w-full  text-left lg:mx-auto hover:bg-blue-100"  @click="categoryProperties('Apartment')">
           <div class="container mx-auto flex justify-center items-center">
-          <img alt="testimonial" class="object-center w-20 h-20 mt-1  h-20" style="height: 30px;" :src="office">
+          <img alt="testimonial" class="object-center w-20 h-20 mt-1 " style="height: 30px;" :src="office">
           </div>
           <small class="font-bold text-gray-700 justify-center mt-2 text-center"> Bedsitter</small>
         </div>
 
         <div class=" border-2 border-gray-50 rounded-lg flex flex-col w-full  text-left lg:mx-auto hover:bg-blue-100"  @click="categoryProperties('Apartment')">
           <div class="container mx-auto flex justify-center items-center">
-          <img alt="testimonial" class="object-center w-20 h-20 mt-1  h-20" style="height: 30px;" :src="apartment">
+          <img alt="testimonial" class="object-center w-20 h-20 mt-1 " style="height: 30px;" :src="apartment">
           </div>
           <small class="font-bold text-gray-700 justify-center mt-2 text-center"> mansion </small>
         </div>
 
         <div class=" border-2 border-gray-50 rounded-lg flex flex-col w-full  text-left lg:mx-auto hover:bg-blue-100"  @click="categoryProperties('Apartment')">
           <div class="container mx-auto flex justify-center items-center">
-          <img alt="testimonial" class="object-center w-20 h-20 mt-1  h-20" style="height: 30px;" :src="apartment">
+          <img alt="testimonial" class="object-center w-20 h-20 mt-1 " style="height: 30px;" :src="apartment">
           </div>
           <small class="font-bold text-gray-700 justify-center mt-2 text-center"> studio  </small>
         </div>
 
         <div class=" border-2 border-gray-50 rounded-lg flex flex-col w-full  text-left lg:mx-auto hover:bg-blue-100"  @click="categoryProperties('Apartment')">
           <div class="container mx-auto flex justify-center items-center">
-          <img alt="testimonial" class="object-center w-20 h-20 mt-1  h-20"  style="height: 30px;" :src="apartment">
+          <img alt="testimonial" class="object-center w-20 h-20 mt-1  "  style="height: 30px;" :src="apartment">
           </div>
           <small class="font-bold text-gray-700 justify-center mt-2 text-center">Hostel </small>
         </div>
@@ -202,14 +202,14 @@
 
         <div class=" border-2 border-gray-50 rounded-lg flex flex-col w-full  text-left lg:mx-auto hover:bg-blue-100"  @click="categoryProperties('Apartment')">
           <div class="container mx-auto flex justify-center items-center">
-          <img alt="testimonial" class="object-center w-20 h-20 mt-1  h-20"  style="height: 30px;" :src="apartment">
+          <img alt="testimonial" class="object-center w-20 h-20 mt-1 "  style="height: 30px;" :src="apartment">
           </div>
           <small class="font-bold text-gray-700 justify-center mt-2 text-center">House</small>
         </div>
 
         <div class=" border-2 border-gray-50 rounded-lg flex flex-col w-full  text-left lg:mx-auto hover:bg-blue-100"  @click="categoryProperties('Apartment')">
           <div class="container mx-auto flex justify-center items-center">
-          <img alt="testimonial" class="object-center w-20 h-20 mt-1  h-20"  style="height: 30px;" :src="apartment">
+          <img alt="testimonial" class="object-center w-20 h-20 mt-1 "  style="height: 30px;" :src="apartment">
           </div>
           <small class="font-bold text-gray-700 justify-center mt-2 text-center"> Maisonette</small>
         </div>
@@ -283,10 +283,10 @@
 
 <!-- property section start -->
 <section id="section3">
-    <h1 class="text-blue-700 text-2xl font-medium text-gray-700 pb-2 mx-5  font-roboto py-4 text-center" style="font-family: 'Nunito', sans-serif;" @click="fetchcategory('')"> 
+    <h1 class="text-2xl font-medium text-gray-700 pb-2 mx-5  font-roboto py-4 text-center" style="font-family: 'Nunito', sans-serif;" @click="fetchcategory('')"> 
       {{ Categ || ' Featured Properties' }} </h1>
     <div class="relative items-center w-full px-3 py-2 mx-2 md:px-10 lg:px-10 max-w-7xl mb-12 border" >
-        <div class="grid w-full grid-cols-1 gap-6 mx-auto lg:grid-cols-4">
+        <div class="grid w-full grid-cols-1 gap-6 mx-auto lg:grid-cols-9">
           <div class="p-6" v-for="prop ,  index in properties" :key="index">
             <router-link :to="{ path: `/moredetails/${prop.id}/${prop.category}` }"> 
               <img class="object-cover object-center w-full mb-5 lg:h-48 md:h-36 rounded-xl" :src="prop.display" alt="blog">

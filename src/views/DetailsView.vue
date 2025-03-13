@@ -278,8 +278,8 @@ export default{
 
 <!-- similar properties start -->
 <section>
-<h1 class="text-blue-700 text-2xl font-medium text-gray-700 pb-2 mx-5  mt-7 font-roboto py-4 font-mono text-center" style="font-family: 'Nunito', sans-serif;">Similar Properties</h1>
-<div class="relative items-center w-full px-3 py-2 mx-2 md:px-10 lg:px-10 max-w-7xl mb-12 border">
+<h1 class="text-2xl font-medium text-gray-700 pb-2   mt-7 font-roboto py-4 font-mono text-center" style="font-family: 'Nunito', sans-serif;">Similar Properties</h1>
+<div class="relative items-center w-full px-3 py-2  md:px-5   mb-12 border">
     <div class="grid w-full grid-cols-1 gap-6 mx-auto lg:grid-cols-4">
 
       <div class="p-6" v-for="prop ,  index in similar" :key="index">
