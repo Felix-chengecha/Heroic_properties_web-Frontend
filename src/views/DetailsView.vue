@@ -1,5 +1,6 @@
 <script >
 import leaflet from "leaflet"
+import Footercom from '../components/Footercom.vue'
 import { useRoute, useRouter } from 'vue-router';
 import axios from '../axios'; 
 import { onMounted } from 'vue';
@@ -154,8 +155,9 @@ export default{
 <template>
  
 <!-- main image and details section start -->
-<section>
- <div class="px-4 py-10 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-18 border mx-2">
+<section class="p-4 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100">
+  
+ <div class="px-4 py-10 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-18 dark:border-gray-600 dark: border rounded-md">
     <div class="flex flex-wrap items-center mx-auto max-w-7xl mt-3">
      
       <div class="w-full lg:max-w-lg lg:w-1/2 rounded-xl">
@@ -268,7 +270,7 @@ export default{
 <!-- main image and details section end -->
    
 <!-- section two  map section start -->
-<section>
+<section class="p-4 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100">
     <div class="relative items-center w-full px-2 py-2 mx-2 md:px-10 lg:px-10 max-w-7xl mb-12 mt-5">
         <div id="mapid"></div>
     </div>
@@ -277,9 +279,9 @@ export default{
  
 
 <!-- similar properties start -->
-<section>
+<section class="p-4 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100">
 <h1 class="text-2xl font-medium text-gray-700 pb-2   mt-7 font-roboto py-4 font-mono text-center" style="font-family: 'Nunito', sans-serif;">Similar Properties</h1>
-<div class="relative items-center w-full px-3 py-2  md:px-5   mb-12 border">
+<div class="relative items-center w-full px-3 py-2  md:px-5   mb-12 dark:border-gray-600 dark: border rounded-md">
     <div class="grid w-full grid-cols-1 gap-6 mx-auto lg:grid-cols-4">
 
       <div class="p-6" v-for="prop ,  index in similar" :key="index">
@@ -289,7 +291,7 @@ export default{
                     <h4 class="mb-2 text-md font-sans leading-none tracking-tighter text-neutral-700">{{ prop.type }}</h4>
                     <span class="mb-2 text-md font-sans leading-none tracking-tighter text-neutral-700">{{ prop.cost }}.KES</span>
                  </div>
-                <small class="mx-auto font-mono  text-gray-500 pr-1 pl-0 py-1"><i class="fas fa-location"></i>{{ prop.location }}</small>>
+                <small class="mx-auto font-mono  text-gray-500 pr-1 pl-0 py-1"><i class="fas fa-location"></i>{{ prop.location }}</small>
           </router-link>
         </div>
 
@@ -299,6 +301,7 @@ export default{
 
 <!-- similar properties end -->
 
+<Footercom />
 
 
 </template>
