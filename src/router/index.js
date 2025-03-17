@@ -4,6 +4,8 @@ import Indexcom from '../views/IndexView.vue'
 import AboutUs from '../components/AboutUs.vue';
 import Contact from '../components/ContactUs.vue';
 import Account from '../components/Account.vue';
+import Signin from '../components/Signin.vue';
+
 
 
 
@@ -34,8 +36,13 @@ const router = createRouter({
             name:'Account',
             component:Account
         },
+        {
+            path: '/Signin',
+            name:'Signin',
+            component:Signin
+        },
 
-
+        
         //aboutus
         {
             path: '/moredetails/:propid/:category',
